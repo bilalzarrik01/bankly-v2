@@ -2,13 +2,13 @@
 session_start();
 include "config/db.php";
 
-/* ====== Auth ====== */
+// /Auth
 if (!isset($_SESSION['user'])) {
-    header("Location: login.php");
+    header("Location: index.php");
     exit;
 }
 
-/* ====== Stats ====== */
+// Stats 
 $clients_count  = mysqli_fetch_assoc(
     mysqli_query($connect, "SELECT COUNT(*) AS total FROM customers")
 )['total'];
@@ -21,7 +21,7 @@ $balance_sum    = mysqli_fetch_assoc(
     mysqli_query($connect, "SELECT SUM(balance) AS total FROM accounts")
 )['total'];
 
-/* ====== Lists ====== */
+// listes
 $clients_list = mysqli_query($connect, "SELECT * FROM customers ORDER BY customer_id DESC");
 
 $accounts_list = mysqli_query(
@@ -47,17 +47,16 @@ $transactions_list = mysqli_query(
 <title>Dashboard - Bankly V2</title>
 
 <style>
-/* ====== Global ====== */
 body{
     font-family: Arial, sans-serif;
     background:#f4f6f8;
     margin:0;
-       background-image: url("image.png");
+       background-image: url("images/image.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-/* ====== Header ====== */
+
 header{
     background :fil;
     color:white;
@@ -77,7 +76,7 @@ header a{
     border-radius:5px;
 }
 
-/* Logout red */
+
 header a[href="logout.php"]{
      background: transparent;
     backdrop-filter: blur;
@@ -92,7 +91,6 @@ header a[href="logout.php"]:hover{
 }
 
 
-/* ====== Actions ====== */
 .actions{
     display:flex;
     justify-content:center;
@@ -111,7 +109,6 @@ header a[href="logout.php"]:hover{
     background:#1e7e34;
 }
 
-/* ====== Stats ====== */
 .stats{
     display:flex;
     justify-content:space-around;
@@ -128,7 +125,6 @@ header a[href="logout.php"]:hover{
     backdrop-filter: blur;
 }
 
-/* ====== Tables ====== */
 .section{
     width:90%;
     margin:30px auto;
@@ -190,10 +186,19 @@ th{
 
 .actions-table .edit{
      color:#007bff;
+     
+     }
+     .actions-table .edit:hover{
+     color:#007bff;
+     text-decoration: underline;
      }
 
 .actions-table .delete{
      color:#dc3545; 
+     }
+     .actions-table .delete:hover{
+     color:#dc3545; 
+     text-decoration: underline;
      }
 
 </style>

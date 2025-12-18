@@ -4,7 +4,7 @@ require "config/db.php";
 
 /* ====== Auth ====== */
 if (!isset($_SESSION['user'])) {
-    header("Location: login.php");
+    header("Location: index.php");
     exit;
 }
 
@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <style>
 body{
     font-family: Arial, sans-serif;
-    background:#f4f6f8;
+    background-image: url('images/image.png');
     display:flex;
     justify-content:center;
     align-items:center;

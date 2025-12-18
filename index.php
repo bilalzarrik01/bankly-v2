@@ -28,7 +28,9 @@ if (isset($_POST['submit'])) {
             margin: 0;
             height: 100vh;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #000000ff, #9b9fa0ff);
+           background-image: url('images/image.png');
+           background-repeat: no-repeat;
+           background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -39,7 +41,7 @@ if (isset($_POST['submit'])) {
             padding: 30px;
             width: 350px;
             border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
             text-align: center;
         }
 
@@ -50,33 +52,37 @@ if (isset($_POST['submit'])) {
 
         .login-box input {
             width: 100%;
-            padding: 12px;
+            padding: 12px ;
             margin: 10px 0;
             border-radius: 8px;
             border: 1px solid #ccc;
             font-size: 15px;
+            margin-left: -12px;
         }
 
         .login-box input:focus {
             outline: none;
             border-color: #007bff;
+              box-shadow:0 4px 6px rgba(0,0,0,0.5);
         }
 
         .login-box button {
             width: 100%;
             padding: 12px;
             margin-top: 15px;
-            background: #3f4d5dff;
+          
+             background: #2a6099ff;
             color: white;
             border: none;
             border-radius: 8px;
             font-size: 16px;
             cursor: pointer;
             transition: 0.3s;
+            
         }
 
         .login-box button:hover {
-            background: #0056b3;
+             background: #1d3857ff;
         }
 
         .error {

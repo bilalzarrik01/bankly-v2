@@ -4,7 +4,7 @@ require __DIR__ . '/config/db.php';
 
 /* ===== AUTH ===== */
 if (!isset($_SESSION['user'])) {
-    header("Location: login.php");
+    header("Location: index.php");
     exit;
 }
 
@@ -104,7 +104,7 @@ if (!$data) {
 <style>
 body{
     font-family: Arial, sans-serif;
-    background:#f4f6f8;
+    background-image: url('images/image.png');
     display:flex;
     justify-content:center;
     align-items:center;
@@ -122,6 +122,7 @@ input, select, button{
     width:100%;
     padding:10px;
     margin:8px 0;
+    margin-left: -12px;
 }
 button{
     background:#007bff;
@@ -184,7 +185,7 @@ hr{
     <button type="submit">Enregistrer</button>
 </form>
 
-<a href="dashboard.php">⬅ Retour</a>
+<a href="dashboard.php"> Retour</a>
 </div>
 
 </body>
