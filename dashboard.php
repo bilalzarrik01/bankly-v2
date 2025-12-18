@@ -52,15 +52,19 @@ body{
     font-family: Arial, sans-serif;
     background:#f4f6f8;
     margin:0;
+       background-image: url("image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* ====== Header ====== */
 header{
-    background:#007bff;
+    background :fil;
     color:white;
     padding:20px;
     text-align:center;
     position:relative;
+    
 }
 
 header a{
@@ -75,11 +79,18 @@ header a{
 
 /* Logout red */
 header a[href="logout.php"]{
-    background:#dc3545;
+     background: transparent;
+    backdrop-filter: blur;
+     box-shadow:0 4px 6px rgba(0,0,0,0.5);
+     color: red;
+     font-size: 18px;
 }
 header a[href="logout.php"]:hover{
     background:#a71d2a;
+    color: whitesmoke;
+
 }
+
 
 /* ====== Actions ====== */
 .actions{
@@ -112,37 +123,54 @@ header a[href="logout.php"]:hover{
     padding:20px;
     text-align:center;
     border-radius:10px;
-    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    box-shadow:0 4px 6px rgba(0,0,0,0.5);
+    background: transparent;
+    backdrop-filter: blur;
 }
 
 /* ====== Tables ====== */
 .section{
     width:90%;
     margin:30px auto;
+    
 }
 
 .section h2{
     display:flex;
     justify-content:space-between;
+    justify-content: center;
     align-items:center;
+    color: whitesmoke;
+     box-shadow:0 4px 6px rgba(0,0,0,0.5);
+     width:90%;
+    margin:30px auto;
+    
+    
+    
+    
+    
 }
 
 .section h2 a{
     font-size:14px;
     padding:6px 10px;
-    background:#007bff;
+    background:#28a745;
     color:white;
     border-radius:5px;
     text-decoration:none;
+    
+    
+    
 }
 
 table{
     width:100%;
     border-collapse:collapse;
-    background:white;
+    background:rgba(236, 236, 236, 0.5);;
     border-radius:10px;
     overflow:hidden;
-    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    box-shadow:0 4px 6px rgba(0,0,0,0.9);
+    
 }
 
 th,td{
@@ -151,7 +179,7 @@ th,td{
 }
 
 th{
-    background:#007bff;
+    background:black;
     color:white;
 }
 
@@ -160,8 +188,14 @@ th{
     text-decoration:none;
 }
 
-.actions-table .edit{ color:#007bff; }
-.actions-table .delete{ color:#dc3545; }
+.actions-table .edit{
+     color:#007bff;
+     }
+
+.actions-table .delete{
+     color:#dc3545; 
+     }
+
 </style>
 </head>
 
@@ -198,7 +232,7 @@ th{
 <div class="section">
 <h2>
     Liste des clients
-    <a href="create.php">➕ Ajouter</a>
+    <!-- <a href="create.php">➕ Ajouter</a> -->
 </h2>
 <table>
 <tr>
