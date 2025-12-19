@@ -107,11 +107,13 @@ body{
     background-image: url('images/image.png');
     display:flex;
     justify-content:center;
+    background-repeat: no-repeat;
+    background-size: cover;
     align-items:center;
     height:100vh;
 }
 .form-box{
-    background:white;
+      background:rgba(236, 236, 236, 0.5);;
     padding:25px;
     border-radius:10px;
     width:400px;

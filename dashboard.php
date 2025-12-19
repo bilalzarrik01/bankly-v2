@@ -51,7 +51,7 @@ body{
     font-family: Arial, sans-serif;
     background:#f4f6f8;
     margin:0;
-       background-image: url("images/image.png");
+    background-image: url("images/image.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -99,14 +99,24 @@ header a[href="logout.php"]:hover{
 }
 
 .actions a{
-    background:#28a745;
+    background:rgba(80, 198, 71, 0.5);
     color:white;
-    padding:10px 15px;
+    padding:10px 20px;
     border-radius:5px;
     text-decoration:none;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 .actions a:hover{
     background:#1e7e34;
+}
+
+/* Bouton Transaction avec style différent */
+.actions a.btn-transaction{
+    background:rgba(0, 123, 255, 0.5);
+}
+.actions a.btn-transaction:hover{
+    background:#0056b3;
 }
 
 .stats{
@@ -214,7 +224,7 @@ th{
 <!-- ACTIONS -->
 <div class="actions">
     <a href="create.php">➕ Ajouter Client</a>
-  
+    <a href="transactions.php" class="btn-transaction">💰 Nouvelle Transaction</a>
 </div>
 
 <!-- STATS -->

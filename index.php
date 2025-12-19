@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
         }
 
         .login-box {
-            background: white;
+             background:rgba(236, 236, 236, 0.5);;
             padding: 30px;
             width: 350px;
             border-radius: 12px;
